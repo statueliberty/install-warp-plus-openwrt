@@ -50,7 +50,7 @@ PROG=/usr/bin/warp
 
 start_service() {
   args=""
-  args="$args -b 127.0.0.1:9090 --scan"
+  args="$args -b 127.0.0.1:9090 -4 --scan"
   procd_open_instance
   procd_set_param command $PROG $args
   procd_set_param stdout 1
